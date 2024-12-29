@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="icon" href="logo.png">
+    <!-- slick slider css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <!-- . -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <body>
+        <div class="navbar">
+            <nav>
+                <table>
+                    <tr>
+                        <td><img src="logo.png" alt="logo" id="logo"></td>
+                        <td><a href="index.html" id="header">INDIAN CRICKET TEAM</a></td>
+                    </tr>
+                </table>
+                <ul>
+                    <li><a href="#">FIXTURES</a></li>
+                    <li><a href="teams.html">TEAMS</a></li>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                </ul>
+                <button type="button" id="subscribe">Subscribe</button>
+            </nav>
+        </div>
+
+        <div class="shirt">
+            <div>
+                <a href="#trending"><button id="shop-btn" type="button"></button></a>
+            </div>
+        </div> <br>
+        <!-- --------------------------------------------------------------------------------------------------------------------- -->
+        <h1 id="title">ICC Men's Cricket World Cup: All the kits revealed so far</h1>
+
+        <div class="wrapper">
+            <div class="slider">
+                <div class="slider-inner">
+                    <!-- item start -->
+                    <div class="item" data-text="India">
+                        <img src="/images/jersey1.png" alt="jersey1" id="jersey1">
+                        <div class="text">
+                            <h1>India</h1>
+                        </div>
+                    </div>
+                    <!-- item end -->
+
+                    <!-- item start -->
+                    <div class="item" data-text="Pakistan">
+                        <img src="/images/jersey2.png" alt="jersey2" id="jersey2">
+                        <div class="text">
+                            <h1 id="pak-h1">Pakistan</h1>
+                        </div>
+                    </div>
+                    <!-- item end -->
+
+                    <!-- item start -->
+                    <div class="item" data-text="Australia">
+                        <img src="/images/jersey3.png" alt="jersey1" id="jersey3">
+                        <div class="text">
+                            <h1>Australia</h1>
+                        </div>
+                    </div>
+                    <!-- item end -->
+
+                    <!-- item start -->
+                    <div class="item" data-text="England">
+                        <img src="/images/jersey4.png" alt="jersey4" id="jersey4">
+                        <div class="text">
+                            <h1 id="eng-h1">England</h1>
+                        </div>
+                    </div>
+                    <!-- item end -->
+
+                    <!-- item start -->
+                    <div class="item" data-text="SriLanka">
+                        <img src="/images/jersey5.png" alt="jersey5" id="jersey5">
+                        <div class="text">
+                            <h1 id="sri-h1">Sri Lanka</h1>
+                        </div>
+                    </div>
+                    <!-- item end -->
+                </div>
+
+                <a href="#" class="btn">Explore</a>
+            </div>
+            <div class="wave-line">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+        </div>
+
+        <!-- jquery cdn link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- jquery slider link -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+
+                $('.slider-inner').slick({
+                    infinite: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    swipe: false,
+                    fade: true,
+                    speed: 1500
+                });
+
+                $('.slider-inner').on('beforeChange', function () {
+                    $("slider-inner .item img").css("clip-path", "polygon(0 0, 100% 0, 100% 0%, 0 0%)");
+                    setTimeout(function () {
+                        $(".slider-inner .item img").css("clip-path", "polygon(0 0, 100% 0, 100% 0%, 0 0%)");
+                    }, 100);
+
+                    $(".slider-inner h1").css("transform", "scale(0)");
+                });
+
+                $('.slider-inner').on('afterChange', function () {
+                    $("slider-inner .item img").css("clip-path", "polygon(0 0, 100% 0, 100% 100%, 0 100%)");
+                    setTimeout(function () {
+                        $(".slider-inner .item img").css("clip-path", "polygon(0 0, 100% 0, 100% 100%, 0 100%)");
+                    }, 100);
+
+                    $(".slider-inner h1").css("transform", "scale(1)");
+                });
+            });
+
+        </script>
+        <!---------------------------------------------------------------------------------------------------------->
+
+        <div class="header-bg">
+            <a name="trending"><h1 class="header">Our Trending Products</h1></a>
+        </div>
+        <section class="sec">
+            <div class="products">
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt1.webp" alt="sjirt1"></div>
+                    <div class="desc">Australia</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$50</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt2.webp" alt="sjirt1"></div>
+                    <div class="desc">India</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$36</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt3.webp" alt="sjirt1"></div>
+                    <div class="desc">India</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$48</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt4.webp" alt="sjirt1"></div>
+                    <div class="desc">Sri Lanka</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$45</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt6.webp" alt="sjirt1"></div>
+                    <div class="desc">New Zealand</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$35</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt7.webp" alt="sjirt1"></div>
+                    <div class="desc">South Africa</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$42</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt8.webp" alt="sjirt1"></div>
+                    <div class="desc">England</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$40</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+
+                <!-- card start -->
+                <div class="card">
+                    <div class="img"><img src="/images/shirt11.webp" alt="sjirt1"></div>
+                    <div class="desc">West Indies</div>
+                    <div class="title">Men T-Shirt</div>
+                    <div class="box">
+                        <div class="price">$74</div>
+                        <button class="buy-now">Buy Now</button>
+                    </div>
+                </div>
+                <!-- card end -->
+            </div>
+        </section>
+        <!------------------------------------------------------------------------------------>
+        <!-- review section start-->
+
+        <section class="review">
+            <h1 class="heading">Customer's <span style="color: yellow;">review</span></h1>
+
+            <div class="box-container">
+                <!-- review start -->
+                <div class="box">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        Was a little nervous to order because the company is out of USA. But I am glad I did!.The clothing is 
+                        true to its size, fabrics are great and styles are up to date and GREAT prices. 
+                    <div class="user">
+                        <img src="/images/customer1.avif" alt="customer1">
+                        <div class="user-info">
+                            <h3>Mike Davis</h3>
+                            <span>Happy Customer</span>
+                        </div>
+                    </div>
+                    <span class="fa fa-quote-right"></span>
+                </div>
+                <!-- review end -->
+
+                <!-- review start -->
+                <div class="box">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>Just received my order & I am thrilled with everything I purchased! and the shipping was 
+                        awesome, it took only 3 days..best yet! I will shop again. Thank you.
+                    </p>
+                    <div class="user">
+                        <img src="/images/customer2.png" alt="customer2">
+                        <div class="user-info">
+                            <h3>Jack Albert</h3>
+                            <span>Thrilled Customer</span>
+                        </div>
+                    </div>
+                    <span class="fa fa-quote-right"></span>
+                </div>
+                <!-- review end -->
+
+                <!-- review start -->
+                <div class="box">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        This is my very first order through site, and I am totally and completely satisfied! 
+                        The fit is great and so are the prices. I will definitely return again and again...
+
+                    </p>
+                    <div class="user">
+                        <img src="/images/customer3.avif" alt="customer3">
+                        <div class="user-info">
+                            <h3>John Deo</h3>
+                            <span>Happy Customer</span>
+                        </div>
+                    </div>
+                    <span class="fa fa-quote-right"></span>
+                </div>
+                <!-- review end -->
+
+            </div>
+        </section>
+
+
+        <section class="footer">
+            <h4>About Us</h4>
+            <p> The Indian men's national cricket team, also known as Team India or the Men in blue,
+                represents India <br>in men's international cricket.
+                2023 © International Cricket Council FZ LLC</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+        </section>
+
+    </body>
+
+</html>
