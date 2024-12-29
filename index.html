@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Cricket Team</title>
+    <link rel="stylesheet" href="ict.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <table>
+                <tr>
+                    <td><img src="logo.png" alt="logo" id="logo"></td>
+                    <td><a href="index.html" id="header">INDIAN CRICKET TEAM</a></td>
+                </tr>
+            </table>
+            <ul>
+                <li><a href="#">FIXTURES</a></li>
+                <li><a href="teams.html">TEAMS</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+            </ul>
+            <a href="#subscribe-email"><button type="button" id="subscribe">Subscribe</button></a>
+        </nav>
+    </div>
+    <div class="countdown">
+        <h1>CRICKET WORLD CUP</h1>
+        <p id="p1">2023 | <span>INDIA</span></p>
+        <div class="launch">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <img src="/images/ball.png" alt="ball" class="ball">
+        <p id="p2">COUNTDOWN TO THE ICC ODI WORLD CUP 2025</p>
+        <p id="p3">19TH FEB TO 9TH MARCH</p>
+        <a href="https://www.icc-cricket.com/news/official-fixtures-announced-for-icc-champions-trophy-2025"><button id="btn1">Learn More</button></a>
+    </div>
+
+    <script>
+        var countDownDate = new Date("Feb 19, 2025 14:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }, 1000);
+
+        if (distance < 0){
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+        }
+    </script>
+
+    <div id="bookTicket">
+        <img src="/images/worldcup.jpeg" alt="icc" id="worldCup">
+        <div id="bookNow">
+            <span>GET YOUR</span> <br>
+            <span> TICKETS NOW </span>
+        </div>
+        <div><a href="https://in.bookmyshow.com/explore/c/icc-cricket-world-cup" ><button id="tickets">BOOK HERE</button></a></div>
+    </div>
+
+
+</body>
+
+</html>
